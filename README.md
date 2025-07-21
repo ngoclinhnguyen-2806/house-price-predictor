@@ -49,7 +49,7 @@ To begin, ensure the following tools are installed on your system:
 
    ```bash
    # Replace xxxxxx with your GitHub username or org
-   git clone https://github.com/xxxxxx/house-price-predictor.git
+   git clone https://github.com/ngoclinhnguyen-2806/house-price-predictor.git
    cd house-price-predictor
    ```
 
@@ -57,7 +57,11 @@ To begin, ensure the following tools are installed on your system:
 
    ```bash
    uv venv --python python3.11
-   source .venv/bin/activate
+   .venv\Scripts\Activate.ps1
+   ```
+If you get an execution policy error, you might need to temporarily allow script execution:
+   ```bash
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
 
 4. **Install dependencies:**
@@ -74,7 +78,7 @@ To track experiments and model runs:
 
 ```bash
 cd deployment/mlflow
-docker compose -f mlflow-docker-compose.yml up -d
+docker compose -f docker-compose.yaml up -d
 docker compose ps
 ```
 
