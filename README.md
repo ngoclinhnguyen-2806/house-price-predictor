@@ -129,6 +129,10 @@ python src/features/engineer.py   --input data/processed/cleaned_house_data.csv 
 
 ### 📈 Step 3: Modeling & Experimentation
 
+Make sure to have these before running this step:
+1. Docker Desktop open and mlflow running
+2. Virtual environment activated
+
 Train your model and log everything to MLflow:
 
 ```bash
